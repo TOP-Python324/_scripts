@@ -19,4 +19,10 @@ a = 10 == 10
 print(a, type(a))
 print(f'{int(a) = }')
 print(f'{float(a) = }')
-print(f'{str(a) = }')
+print(f'{str(a) = }\n')
+
+x = int(input('x = '))
+
+print(x >= 100 and x < 1000)
+print(100 <= x and x < 1000)
+print(100 <= x < 1000)
