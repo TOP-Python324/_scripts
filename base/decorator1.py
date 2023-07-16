@@ -1,7 +1,11 @@
+from functools import wraps
+
+
 def decorator(func_obj: 'callable') -> 'callable':
     """Декоратор"""
     print('начало вызова функции-декоратора')
     
+    @wraps(func_obj)
     def wrapper(*args, **kwargs):
         """Обёртка"""
         print('\tначало вызова функции-обёртки')
