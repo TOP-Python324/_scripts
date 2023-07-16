@@ -1,0 +1,35 @@
+[
+    {
+        "_id": "_b_mountains",
+        "name": "Горы",
+        "changed": false,
+        "enter condition": {},
+        "zones": [
+            "_z_plateau", 
+            "_z_scarp", 
+            "_z_rocks", 
+            "_z_nek"
+        ]
+    },
+    {
+        "_id": "_z_plateau",
+        "name": "Плато",
+        "points": [
+            "_p_plain", 
+            "_p_small_boulders", 
+            "_p_small_boulders_herbivorous_attack",
+            "_p_large_boulders",
+            "_p_large_boulders_predator_attack"
+        ]
+    },
+    {
+        "_id": "_z_scarp",
+        "name": "Крутой склон",
+        "points": []
+    },
+    {
+        "_id": "_z_rocks",
+        "name": "Скалы",
+        "points": []
+    }
+]
