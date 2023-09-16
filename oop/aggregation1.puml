@@ -1,0 +1,24 @@
+@startuml
+
+!theme monokai from ..\.styles
+
+class Product {
+    +name: <i>str</i>
+    +produced: <i>date</i>
+    +expire: <i>date</i>
+    __init__()
+    __repr__()
+    +is_expired() → <i>bool</i>
+}
+
+class Fridge {
+    +camera: <i>list</i>[Product]
+    __init__()
+    __iter__()
+    __repr__()
+    +clear_expired() → <i>None</i>
+}
+
+Fridge o-left- Product
+
+@enduml
