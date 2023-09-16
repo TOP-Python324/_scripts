@@ -1,6 +1,9 @@
 @startuml
 
+scale 2
+
 !theme monokai from ..\.styles
+
 
 class Product {
     +name: <i>str</i>
