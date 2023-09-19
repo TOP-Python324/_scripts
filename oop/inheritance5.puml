@@ -1,0 +1,34 @@
+@startuml
+
+!theme monokai_npp from ..\.styles
+
+scale 2
+
+class Vehicle {
+    +{static}wheels: int
+    +speed: int
+    __init__()
+    +move()
+}
+class Bicycle {
+    +{static}wheels: int
+}
+class Car
+class Train {
+    +{static}wheels: int
+    +move()
+}
+class Airplane {
+    +{static}chassis: int
+    +ground_speed: int
+    +air_speed: int
+    __init__()
+    +move()
+}
+
+Vehicle <|-- Bicycle
+Vehicle <|-- Car
+Vehicle <|-- Train
+Vehicle <|-- Airplane : пример неудачного наследования
+
+@enduml
