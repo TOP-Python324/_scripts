@@ -1,5 +1,5 @@
 ''
-'' A dark style from Stack Overflow
+'' A Monokai Pro style from PyCharm
 ''
 '' Original Author: https://github.com/GennDALF
 '' https://github.com/...
@@ -23,31 +23,31 @@
 !$FONT_SIZE_LARGER = 18
 !endif
 
-!$FONT_LIGHT = "e7e9eb"
-!$FONT_VERY_LIGHT = "ffffff"
-!$FONT_DARK = "c4c8cc"
-!$FONT_VERY_DARK = "666666"
+!$FONT_VERY_LIGHT = "fcfcfa"
+!$FONT_LIGHT = "bfbfbe"
+!$FONT_DARK = "8e8e8d"
+!$FONT_VERY_DARK = "696969"
 
-!$BOX_BG = "474747"
-!$BOX_BG_LIGHT = "616161"
+!$BOX_BG_LIGHT = "c5c5c4"
+!$BOX_BG = "4d4d4d"
 !$BOX_BG_DARK = "171717"
 
-!$BORDER = "696f75"
-!$BORDER_LIGHT = "dadee1"
-!$BORDER_DARK = "434648"
+!$BORDER = "afb1b3"
+!$BORDER_LIGHT = "fcfcfa"
+!$BORDER_DARK = "171717"
 
-!$ACCENT = "f48225"
-!$ACCENT_LIGHT = "faa35b"
-!$ACCENT_DARK = "9f4e0c"
+!$ACCENT = "faaa3c"
+!$ACCENT_LIGHT = "#fccc8a"
+!$ACCENT_DARK = "#b56b05"
 '' skinparam stereotypeCBackgroundColor $ACCENT
 
-!$ARROW = "e7e9eb"
+!$ARROW = "afb1b3"
 !$ARROW_LIGHT = "fcfcfa"
 !$ARROW_DARK = "000"
 !$ARROW_FONT = "b7b6b6"
 
 
-skinparam backgroundColor 2d2d2d
+skinparam backgroundColor 272822
 
 !procedure font_style()
   fontColor $FONT_LIGHT
@@ -228,6 +228,11 @@ skinparam activity {
   basic_style()
   font_style()
   arrow_style()
+
+  StartColor $ACCENT_DARK
+  EndColor $ACCENT_DARK
+  ' DiamondBackgroundColor $ACCENT_DARK
+  DiamondBorderColor $ACCENT_DARK
 }
 
 ' State diagrams
@@ -236,8 +241,9 @@ skinparam state {
   basic_style()
   font_style()
   arrow_style()
-  startColor $ACCENT
-  endColor $ACCENT_DARK
+
+  StartColor $ACCENT_DARK
+  EndColor $ACCENT_DARK
 }
 
 ' Object diagrams
@@ -252,15 +258,21 @@ skinparam object {
 
 skinparam frame {
   heavy_style()
-  fontColor $FONT_LIGHT
+
+  FontColor $FONT_LIGHT
+}
+
+skinparam package {
+  FontColor $FONT_DARK
 }
 
 skinparam note {
   light_style()
-  fontName $FONT_NAME_CYRILLIC
-  fontSize $FONT_SIZE_SMALLER
-'  fontStyle Italic
-  fontColor $FONT_VERY_LIGHT
+
+  FontName $FONT_NAME_CYRILLIC
+  FontSize $FONT_SIZE_SMALLER
+  FontStyle Italic
+  FontColor $BOX_BG_DARK
 }
 
 skinparam cloud {

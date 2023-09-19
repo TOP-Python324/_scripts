@@ -1,8 +1,8 @@
 @startuml
 
-scale 2
+!theme monokai_npp from ..\.styles
 
-!theme monokai from ..\.styles
+scale 2
 
 
 class Product {
