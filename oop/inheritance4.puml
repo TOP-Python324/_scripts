@@ -1,0 +1,21 @@
+@startuml
+
+!theme monokai_npp from ..\.styles
+
+scale 2
+
+class Person {
+    +last_name: str
+    +first_name: str
+    +patr_name: str
+    __init__()
+}
+class Employee {
+    +position: str
+    +income: dec
+    __init__()
+}
+
+Person <|-- Employee
+
+@enduml
