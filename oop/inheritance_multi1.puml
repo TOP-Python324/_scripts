@@ -1,0 +1,23 @@
+@startuml
+
+!theme monokai_npp from ..\.styles
+scale 2
+
+hide class empty methods
+
+class A {
+    +{static}attr
+}
+class B {
+    +{static}attr
+}
+' class C
+' class D
+
+A <|-- C
+B <|-- C
+
+' A <|-- D
+' B <|-- D
+
+@enduml
