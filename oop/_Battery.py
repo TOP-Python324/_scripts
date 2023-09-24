@@ -1,11 +1,13 @@
 class Battery(int):
     def __new__(cls, value: int, capacity: int):
-        instance = int.__new__(cls, value)
+        # instance = int.__new__(cls, value)
+        instance = super().__new__(cls, value)
         instance.capacity = capacity
         return instance
     
     def __iadd__(self, other):
-        return Battery(super().__add__(other), self.capacity)
+        # return Battery(super().__add__(other), self.capacity)
+        return self.__class__(super().__add__(other), self.capacity)
     
     def __bool__(self):
         return self >= self.capacity
