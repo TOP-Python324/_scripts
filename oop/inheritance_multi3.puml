@@ -1,0 +1,52 @@
+@startuml
+
+!theme monokai_npp from ..\.styles
+scale 2
+
+hide abstract empty members
+hide class empty members
+
+abstract dict
+
+class Person {
+    +last_name: <i>str</i>
+    +first_name: <i>str</i>
+    +patr_name: <i>str</i>
+    __init__()
+    __repr__()
+}
+class Student {
+    +year: <i>int</i>
+    __init__()
+}
+
+class CatalogueCard {
+    +title: <i>str</i>
+    +year: <i>int</i>
+    __init__()
+}
+class BookCard {
+    +authors: <i>tuple</i>[Person, ...]
+    __init__()
+}
+class CompendiumCard {
+    __init__()
+}
+
+class "Printable" as p1 {
+    +print() → <i>None</i>
+}
+' class "Printable" as p2 {
+    ' +print() → <i>None</i>
+' }
+
+p1 <|-left- Student
+Person <|-- Student
+
+CatalogueCard <|-- BookCard
+
+CatalogueCard <|-- CompendiumCard
+dict <|-- CompendiumCard
+p1 <|-right- CompendiumCard
+
+@enduml
