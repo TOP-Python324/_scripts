@@ -1,0 +1,25 @@
+@startuml
+
+!theme monokai_npp from ..\.styles
+
+scale 2
+
+hide enum empty members
+
+class Person {
+    +last_name: <i>str</i>
+    +first_name: <i>str</i>
+    +patr_name: <i>str</i>
+    +sex: SEX
+    __init__()
+    __repr__()
+}
+
+enum SEX {
+    M = 'мужской'
+    F = 'женский'
+}
+
+Person *-left- Sex
+
+@enduml
